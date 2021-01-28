@@ -21,6 +21,7 @@ mongoose.connect(db,{ useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>{console.log("Connected to MongoDB")})
 .catch((err)=> {console.log(err)});
 
+//Routes
 app.use('/',require('./routes/index'));
 
 const PORT= process.env.PORT || 5000;
