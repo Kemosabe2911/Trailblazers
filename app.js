@@ -7,6 +7,12 @@ const bodyparser= require('body-parser');
 app.use(bodyparser.urlencoded({extended:false})) 
 app.use(bodyparser.json()) 
 
+//EJS
+app.set('view engine', 'ejs');
+
+//Public Folder
+app.use(express.static(__dirname+'/public'));
+
 app.use('/',require('./routes/index'));
 
 const PORT= process.env.PORT || 5000;

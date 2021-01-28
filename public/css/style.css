@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+}
+.welcome{
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 30px 10px;
+}
+.tform{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 30px;
+}
+.tform form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+.tform form label{
+    margin: 15px 0px;
+}
+.tform form input{
+    margin: 10px;
+    text-align: left;
+}
+.tform form .tname{
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 5px;
+    font-size: 18px;
+}
+.tform form .tbtn{
+    padding: 10px 30px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    transform: 0.7s;
+    cursor: pointer;
+}
+.tform form .tbtn:hover{
+    color: #000000; 
+    background-color: #ffffff;
+}
