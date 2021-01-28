@@ -13,6 +13,14 @@ app.set('view engine', 'ejs');
 //Public Folder
 app.use(express.static(__dirname+'/public'));
 
+//MongoDB Config
+const db= require('./config/key').MongoURI;
+
+//Connect to MongoDB
+mongoose.connect(db,{ useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=>{console.log("Connected to MongoDB")})
+.catch((err)=> {console.log(err)});
+
 app.use('/',require('./routes/index'));
 
 const PORT= process.env.PORT || 5000;
