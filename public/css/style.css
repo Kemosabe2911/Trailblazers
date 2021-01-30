@@ -5,7 +5,7 @@
 }
 body{
     background-color: #cccccc;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .welcome{
     text-align: center;
@@ -114,27 +114,37 @@ body{
     padding: 10px 25px;
     font-size: 18px;
     color: #ffffff;
-    background-color: green;
-    border: 2px solid green;
+    background-color: #17b978;
+    border: 2px solid #17b978;
     margin: 30px 0px;
     transition: 0.8s;
 }
 .start-btn:hover{
-    opacity: 0.65;
+    opacity: 0.75;
+}
+a.start-btn{
+    text-decoration: none;
+    font-weight: 600px;
 }
 .exit{
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 2;
-    margin: 0px 30px;
+    margin: 30px;
 }
 .timer{
     position: fixed;
     top: 0;
     right: 0;
     padding: 10px 15px;
-    background-color: red;
-    color: #000000;
+    background-color: #e00101;
+    color: #ffffff;
     font-size: 25px;
+}
+.timer:hover{
+    opacity: 1;
+}
+.white{
+    color: #ffffff;
 }
