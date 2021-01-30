@@ -52,12 +52,14 @@ app.listen(PORT, console.log(`Server running at ${PORT}`));
 
 app.post('/',(req,res) =>{
     const email= req.body.email;
+    console.log(email);
     let errors=[];
     if(!email){
         errors.push({msg: "Please Enter an Email Id"});
         console.log(errors);
     }
     else{
+        console.log('Hello');
         Email.findOne({email: email})
         .then((email) => {
             console.log(email);
