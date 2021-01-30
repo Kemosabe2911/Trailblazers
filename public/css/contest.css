@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #cccccc;
+    overflow: hidden;
+}
+.welcome{
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 30px 10px;
+}
+.tform{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 20px 40px;
+}
+.tform form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+.tform form label{
+    margin: 15px 0px;
+}
+.tform form input{
+    margin: 10px;
+    text-align: left;
+}
+.tform form .tname{
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 10px;
+    font-size: 16px;
+    width: 110%;
+}
+.tform form .tbtn{
+    margin-top: 30px;
+    padding: 10px 30px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+.tform form .tbtn:hover{
+    transition: 1s;
+    color: #000000; 
+    background-color: #ffffff;
+}
+.v-header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80vw;
+    height: 90vh;
+    margin: 30px auto;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid transparent;
+}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-container video{
+    min-width: 100%;
+    min-height: 100%;
+}
+.overlay{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #ffffff;
+    opacity: 0.75;
+    z-index: 1;
+}
+.v-header .instructs{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+.v-header .instructs h2{
+    font-size: 50px;
+    padding: 20px;
+}
+.v-header .instructs h4{
+    font-size: 35px;
+    margin: 20px 0px;
+}
+.v-header .instructs .instruct-content{
+    line-height: 1.5;
+    font-size: 20px;
+}
+.start-btn{
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #17b978;
+    border: 2px solid #17b978;
+    margin: 30px 0px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+.start-btn:hover{
+    opacity: 0.75;
+}
+a.start-btn{
+    text-decoration: none;
+    font-weight: 600px;
+}
+.exit{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    margin: 30px;
+}
+.timer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    background-color: #e00101;
+    color: #ffffff;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.timer:hover{
+    opacity: 1;
+}
+.white{
+    color: #ffffff;
+}
