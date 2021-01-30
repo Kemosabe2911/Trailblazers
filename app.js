@@ -39,7 +39,9 @@ app.get('/team',(req,res) =>{
 })
 
 app.get('/instruct',(req,res) =>{
-    res.render('instruct');
+    res.render('instruct',{
+        video: "demo"
+    });
 })
 
 

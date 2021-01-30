@@ -8,5 +8,10 @@
 </head>
 <body>
     <h1 class="welcome">Welcome</h1>
+    <div class="container">
+        <video id="myvideo" controls>
+            <source src="<%= typeof video !='undefined'? `/videos/${video}.mp4` : 'Not displaying' %>" type="video/mp4">
+        </video>
+    </div>
 </body>
 </html>
