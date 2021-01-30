@@ -116,11 +116,13 @@ app.post('/team',(req,res) =>{
 
 app.post('/start',(req,res) =>{
     const teamName = req.body.team;
-    let timeLeft = 15*60;
+    let timeLeft = 0;
+    let score =0;
     console.log(teamName,timeLeft);
     res.render('contest',{
         video: "demo",
         team: teamName,
-        time: timeLeft
+        time: timeLeft,
+        score: score
     });
 })

@@ -9,18 +9,33 @@ function displayTime() {
     seconds= seconds<10 ? "0"+seconds : seconds;
     document.getElementById('time').innerHTML= minutes + ":" + seconds;
     var interval = setInterval(timer,1000);
+    minutes= parseInt(minutes);
+    seconds= parseInt(seconds);
+    if(seconds>=59){
+        seconds=0;
+        minutes=minute+1;
+    }
+    else{
+        seconds=seconds+1;
+    }
+    console.log(minutes,seconds);
     function timer(){
-        if(seconds<=0){
-            seconds=59;
-            if(minutes<=0){
-                clearInterval(interval);
-            }
-            minutes=minutes-1;
-        }
-        seconds=seconds-1;
+        minutes= parseInt(minutes);
+        seconds= parseInt(seconds);
+        //console.log(minutes,seconds);
         minutes= minutes<10 ? "0"+minutes : minutes;
         seconds= seconds<10 ? "0"+seconds : seconds;
+        //console.log(minutes,seconds);
         document.getElementById('time').innerHTML= minutes + ":" + seconds;
+        minutes= parseInt(minutes);
+        seconds= parseInt(seconds);
+        if(seconds>=59){
+            seconds=0;
+            minutes=minutes+1;
+        }
+        else{
+            seconds=seconds+1;
+        }
         timeleft =  minutes * 60 + seconds;
         document.getElementById("timeinput").value= parseInt(timeleft);
     }
