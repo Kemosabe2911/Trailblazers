@@ -118,6 +118,7 @@ body{
     border: 2px solid #17b978;
     margin: 30px 0px;
     transition: 0.8s;
+    cursor: pointer;
 }
 .start-btn:hover{
     opacity: 0.75;

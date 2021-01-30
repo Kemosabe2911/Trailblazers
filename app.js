@@ -89,18 +89,36 @@ app.post('/team',(req,res) =>{
     else{
         Team.findOne({name: name})
         .then((team) =>{
+            console.log(team);
             if(team){
-                errors.push({msg: "Team name already registered"});
-                console.log(errors);
+                let teamName= team.name;
+                    res.render('instruct',{
+                        video: "demo",
+                        team: teamName
+                    });
+                console.log("Success");
             }
             else{
                 const newTeam = new Team({name,score});
                 newTeam.save()
                 .then((team) =>{
-                    res.redirect('/instruct');
+                    let teamName= team.name;
+                    res.render('instruct',{
+                        video: "demo",
+                        team: teamName
+                    });
                     console.log("Success");
                 });
             }
         })
     }
+})
+
+app.post('/start',(req,res) =>{
+    const teamName = req.body.team;
+    console.log(teamName);
+    res.render('instruct',{
+        video: "demo",
+        team: teamName
+    });
 })
