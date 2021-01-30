@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #ffffff;
-    overflow: hidden;
+    background-color: #cccccc;
+    overflow-x: hidden;
 }
 .welcome{
     text-align: center;
@@ -58,26 +58,73 @@ body{
     color: #000000; 
     background-color: #ffffff;
 }
-.container{
-    width: 90vw;
-    height: 90vh;
-    margin: 40px auto;
-    background-color: #cccccc;
-}
-.video-contaniner{
-    width: 100%;
-    height: 100%;
-    z-index: 1;  
-    border: 2px solid #000000;
-    padding: 10px;
+.v-header{
+    display: flex;
+    align-items: center;
     position: relative;
+    width: 80vw;
+    height: 90vh;
+    margin: 30px auto;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid transparent;
 }
-.video-contaniner video{
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
-.contaniner .instructs{
+.video-container video{
+    min-width: 100%;
+    min-height: 100%;
+}
+.overlay{
     position: absolute;
-    z-index: 2;
-    margin-bottom: 300px;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #ffffff;
+    opacity: 0.75;
+    z-index: 1;
 }
+.v-header .instructs{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+.v-header .instructs h2{
+    font-size: 50px;
+    padding: 20px;
+}
+.v-header .instructs h4{
+    font-size: 35px;
+    margin: 20px 0px;
+}
+.v-header .instructs .instruct-content{
+    line-height: 1.5;
+    font-size: 20px;
+}
+.start-btn{
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: green;
+    border: 2px solid green;
+    margin: 30px 0px;
+    transition: 0.8s;
+}
+.start-btn:hover{
+    opacity: 0.65;
+}
+.exit{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+ 
