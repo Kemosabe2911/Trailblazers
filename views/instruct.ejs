@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body>
-    <h1 class="welcome">Welcome</h1>
     <div class="container">
-        <video id="myvideo" controls>
-            <source src="<%= typeof video !='undefined'? `/videos/${video}.mp4` : 'Not displaying' %>" type="video/mp4">
-        </video>
+        <div class="video-container"">
+            <video id="myvideo" class="video-player" src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" autoplay muted loop>
+                <!--<source src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" type="video/mp4">-->
+            </video>
+        </div>
+        <div class="instructs">
+            <h2>Welcome Trailblazers!</h2>
+            <h4>Get ready to rumble</h4>
+            <div class="instruct-content">
+                <p>Make sure you read the instructions in yur mail</p>
+                <p>Make sure you read the instructions in yur mail</p>
+                <p>Make sure you read the instructions in yur mail</p>
+                <p>Make sure you read the instructions in yur mail</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
