@@ -159,3 +159,17 @@ a.start-btn{
 .display{
     display: block;
 }
+.btn-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.btn-container .op-btns{
+    padding: 20px;
+    color: #ffffff;
+    background-color: blue;
+    border: 2px solid blue;
+    margin: 20px 100px;
+    width: 200px;
+}

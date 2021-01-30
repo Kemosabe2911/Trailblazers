@@ -21,11 +21,17 @@
             <div class="instruct-content">
                 <p><%= task%></p>
             </div>
-            <form action="/start" method="POST">
+            <form action="/task-1" method="POST">
                 <input type="hidden" name="team" value="<%=team%>"/>
                 <input type="hidden" id="timeinput" name="time" value="<%=time%>"/>
-                <input type="hidden" name="score" value="<%=score%>"/>
-                <input type="submit" class="start-btn" value="Let's Go!">
+                <input type="hidden" id="answer" name="ans" value="<%=ans%>"/>
+                <div class="btn-container">
+                <% if( typeof options != 'undefined'){ %>
+                    <% options.forEach(function(data){ %>
+                        <input type="button" class="op-btns" onclick="ansCheck()" value="<%=data %>">
+                    <% }); %>
+                <% } %>
+                </div>
             </form>
         </div>
         <div class="exit">

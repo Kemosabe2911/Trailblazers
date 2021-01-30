@@ -120,7 +120,7 @@ app.post('/start',(req,res) =>{
     let score =0;
     console.log(teamName,timeLeft);
     res.render('contest',{
-        video: "demo",
+        video: "demo-1",
         no: 1,
         team: teamName,
         time: timeLeft,
