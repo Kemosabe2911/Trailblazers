@@ -26,7 +26,7 @@ router.post('/',(req,res) =>{
                 const newTeam = new Team({name,score});
                 newTeam.save()
                 .then((team) =>{
-                    res.redirect('/');
+                    res.redirect('/welcome');
                     console.log("Success");
                 });
             }

@@ -22,7 +22,9 @@ mongoose.connect(db,{ useNewUrlParser: true, useUnifiedTopology: true})
 .catch((err)=> {console.log(err)});
 
 //Routes
-app.use('/',require('./routes/index'));
+app.use('/',require('./routes/login'));
+
+app.use('/welcome',require('./routes/index'));
 
 const PORT= process.env.PORT || 5000;
 
