@@ -166,10 +166,20 @@ a.start-btn{
     align-items: center;
 }
 .btn-container .op-btns{
-    padding: 20px;
+    padding: 10px 20px;
     color: #ffffff;
-    background-color: blue;
-    border: 2px solid blue;
+    background-color: #0e49b5;
+    border: 2px solid #0e49b5;
     margin: 20px 100px;
     width: 200px;
+    cursor: pointer;
+    transition: 0.8s;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+}
+.btn-container .op-btns:hover{
+    border-color: #0e49b5;
+    color: #0e49b5;
+    background-color: #ffffff;
 }

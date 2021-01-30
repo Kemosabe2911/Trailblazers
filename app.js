@@ -45,7 +45,7 @@ app.get('/instruct',(req,res) =>{
 })
 
 
-const PORT= process.env.PORT || 5000;
+const PORT= process.env.PORT || 4000;
 
 app.listen(PORT, console.log(`Server running at ${PORT}`));
 
@@ -125,6 +125,8 @@ app.post('/start',(req,res) =>{
         team: teamName,
         time: timeLeft,
         score: score,
-        task: "The awe-inspiring mountain Huangshan is a UNESCO World Heritage Site and major tourist attraction in China. Which famous Chinese poet found inspiration at Huangshan?"
+        task: "The awe-inspiring mountain Huangshan is a UNESCO World Heritage Site and major tourist attraction in China. Which famous Chinese poet found inspiration at Huangshan?",
+        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
+        ans: "Li Bai"
     });
 })
