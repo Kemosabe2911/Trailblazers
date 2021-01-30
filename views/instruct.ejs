@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="video-container"">
-            <video id="myvideo" class="video-player" src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" autoplay muted loop>
+        <div class="video-container">
+            <video id="myvideo" class="video-player" src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" width="90%" height="90%" overflow="hidden" autoplay muted loop>
                 <!--<source src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" type="video/mp4">-->
             </video>
         </div>
