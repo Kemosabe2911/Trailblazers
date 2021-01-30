@@ -26,7 +26,7 @@ function displayTime() {
         minutes= minutes<10 ? "0"+minutes : minutes;
         seconds= seconds<10 ? "0"+seconds : seconds;
         //console.log(minutes,seconds);
-        document.getElementById('time').innerHTML= minutes + ":" + seconds;
+        document.getElementById('time').innerHTML= " "+minutes + ":" + seconds +" ";
         minutes= parseInt(minutes);
         seconds= parseInt(seconds);
         if(seconds>=59){
@@ -41,3 +41,9 @@ function displayTime() {
     }
 }
 
+
+function displayTask(){
+    //alert('Hello');
+    document.getElementById("overlay").style.display= "block";
+    document.getElementById("instruct").style.display= "block";
+}

@@ -121,8 +121,10 @@ app.post('/start',(req,res) =>{
     console.log(teamName,timeLeft);
     res.render('contest',{
         video: "demo",
+        no: 1,
         team: teamName,
         time: timeLeft,
-        score: score
+        score: score,
+        task: "The awe-inspiring mountain Huangshan is a UNESCO World Heritage Site and major tourist attraction in China. Which famous Chinese poet found inspiration at Huangshan?"
     });
 })

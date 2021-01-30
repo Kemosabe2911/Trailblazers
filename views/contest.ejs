@@ -11,19 +11,15 @@
     <div class="container v-header">
         <div class="video-container">
             <video id="myvideo" class="video-player" src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" 
-                autoplay muted loop>
+                autoplay muted onended="displayTask()">
                 <!--<source src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" type="video/mp4">-->
             </video>
         </div>
-        <div class="overlay"></div>
-        <div class="instructs">
-            <h2>Welcome Trailblazers!</h2>
-            <h4>Get ready to rumble</h4>
+        <div class="overlay" id="overlay"></div>
+        <div class="instructs" id="instruct">
+            <h2>Task <%=no%></h2>
             <div class="instruct-content">
-                <p>Make sure you read the instructions in yur mail</p>
-                <p>Set up a meet among yout team mates and share the screen with them.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, dolor?</p>
-                <p>Make sure you read the instructions in yur mail <%=team%></p>
+                <p><%= task%></p>
             </div>
             <form action="/start" method="POST">
                 <input type="hidden" name="team" value="<%=team%>"/>

@@ -88,6 +88,7 @@ body{
     background-color: #ffffff;
     opacity: 0.75;
     z-index: 1;
+    display: none;
 }
 .v-header .instructs{
     z-index: 2;
@@ -97,6 +98,8 @@ body{
     flex-direction: column;
     text-align: center;
     width: 100%;
+    opacity: 1;
+    display: none;
 }
 .v-header .instructs h2{
     font-size: 50px;
@@ -109,6 +112,7 @@ body{
 .v-header .instructs .instruct-content{
     line-height: 1.5;
     font-size: 20px;
+    padding: 0px 30px;
 }
 .start-btn{
     padding: 10px 25px;
@@ -151,4 +155,7 @@ a.start-btn{
 }
 .white{
     color: #ffffff;
+}
+.display{
+    display: block;
 }
