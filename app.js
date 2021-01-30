@@ -130,3 +130,19 @@ app.post('/start',(req,res) =>{
         ans: "Li Bai"
     });
 })
+
+app.post('/task-1',(req,res) =>{
+    const teamName = req.body.team;
+    let timeLeft = req.body.time;
+    let score = 0;
+    console.log(teamName,timeLeft);
+    res.render('contest',{
+        video: "demo-1",
+        no: 2,
+        team: teamName,
+        time: timeLeft,
+        task: "The awe-inspiring mountain Huangshan is a UNESCO World Heritage Site and major tourist attraction in China. Which famous Chinese poet found inspiration at Huangshan?",
+        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
+        ans: "Li Bai"
+    });
+})

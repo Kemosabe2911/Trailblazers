@@ -47,3 +47,20 @@ function displayTask(){
     document.getElementById("overlay").style.display= "block";
     document.getElementById("instruct").style.display= "block";
 }
+
+function ansCheck(clicked){
+    var choice = clicked;
+    console.log(clicked);
+    var ans = document.getElementById("answer").value;
+    if( ans === choice){
+        document.getElementById("form_id").submit();
+    }
+    else{
+        //document.getElementById("popup").style.opacity=1;
+        alert("Wrong Answer! Please Try Again");
+    }
+}
+
+function popupClose(){
+    document.getElementById("popup").style.opacity= 0;
+}

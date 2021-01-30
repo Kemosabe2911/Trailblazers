@@ -21,14 +21,14 @@
             <div class="instruct-content">
                 <p><%= task%></p>
             </div>
-            <form action="/task-1" method="POST">
+            <form id="form_id" action="/task-<%=no %>" method="POST">
                 <input type="hidden" name="team" value="<%=team%>"/>
                 <input type="hidden" id="timeinput" name="time" value="<%=time%>"/>
                 <input type="hidden" id="answer" name="ans" value="<%=ans%>"/>
                 <div class="btn-container">
                 <% if( typeof options != 'undefined'){ %>
                     <% options.forEach(function(data){ %>
-                        <input type="button" class="op-btns" onclick="ansCheck()" value="<%=data %>">
+                        <input type="button" class="op-btns" onclick="ansCheck(this.value)" value="<%=data %>">
                     <% }); %>
                 <% } %>
                 </div>
@@ -41,6 +41,10 @@
     <div class="timer" id="timer">
         <i class="fas fa-clock white"></i>
         <div id="time"></div>
+    </div>
+    <div class="popup" id="popup">
+        Wrong Answer try Again
+        <button class="close-btn" id="close" onclick="popupClose()">Close</button>
     </div>
     <script src="/js/main.js"></script>
 </body>
