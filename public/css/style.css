@@ -127,4 +127,14 @@ body{
     bottom: 0;
     right: 0;
     z-index: 2;
- 
+    margin: 0px 30px;
+}
+.timer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    background-color: red;
+    color: #000000;
+    font-size: 25px;
+}
