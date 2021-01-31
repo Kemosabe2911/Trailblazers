@@ -57,7 +57,11 @@ function ansCheck(clicked){
     }
     else{
         //document.getElementById("popup").style.display="block";
-        alert("Wrong Answer! Please Try Again");
+        
+            alertify
+            .alert("Wrong Answer! Please Try Again", function(){
+            alertify.message('OK');
+            });
     }
 }
 
