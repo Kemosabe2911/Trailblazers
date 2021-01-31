@@ -192,9 +192,16 @@ app.post('/task-4',(req,res) =>{
     let timeLeft = req.body.time;
     let score = 0;
     console.log(teamName,timeLeft);
+    Team.updateOne({name: teamName},
+        {$set: {score: timeLeft}}, function(err,updatedTeam){
+            if(!err){
+                console.log("suceess");
+            }
+        }
+    )
     //const result= Team.find({name: teamName})
     //console.log(result);
-    Team.find({},function(err,team){
+    /*Team.find({},function(err,team){
         if(!err){
             console.log(team)
             console.log("Success");
@@ -202,7 +209,7 @@ app.post('/task-4',(req,res) =>{
         else{
             console.log(err)
         }
-    })
+    }).sort({name: -1})*/
 })
 
 
@@ -212,12 +219,23 @@ app.get('/leaderboard',(req,res) =>{
             console.log(team)
             const result= team;
             console.log("Success");
+            console.log(result);
+            res.render("leaderboard",{
+                teams: result
+            });
         }
         else{
             console.log(err)
         }
-    }).sort({name: -1})
-    res.render("leaderboard",{
-        teams: result
-    });
+    }).sort({score: 1})
+    /*
+    result.sort(sortFunction);
+    function sortFunction(a,b){
+        if(a[2] === b[2]){
+            return 0;
+        }
+        else{
+            return (a[2]<b[2]) ? -1 : 1;
+        }
+    }*/
 })
