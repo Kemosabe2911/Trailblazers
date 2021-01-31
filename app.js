@@ -114,6 +114,7 @@ app.post('/team',(req,res) =>{
     }
 })
 
+//task1 - Auditorium
 app.post('/start',(req,res) =>{
     const teamName = req.body.team;
     let timeLeft = 0;
@@ -131,17 +132,37 @@ app.post('/start',(req,res) =>{
     });
 })
 
+//task2- Central Library
 app.post('/task-1',(req,res) =>{
     const teamName = req.body.team;
     let timeLeft = req.body.time;
     let score = 0;
     console.log(teamName,timeLeft);
-    res.render('contest',{
+    res.render('contest-layout-2',{
         video: "demo-1",
         no: 2,
         team: teamName,
         time: timeLeft,
-        task: "The awe-inspiring mountain Huangshan is a UNESCO World Heritage Site and major tourist attraction in China. Which famous Chinese poet found inspiration at Huangshan?",
+        image: "task-2.jpeg",
+        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
+        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
+        ans: "Li Bai"
+    });
+})
+
+//task3 - Basketball Court
+app.post('/task-2',(req,res) =>{
+    const teamName = req.body.team;
+    let timeLeft = req.body.time;
+    let score = 0;
+    console.log(teamName,timeLeft);
+    res.render('contest-layout-2',{
+        video: "demo-1",
+        no: 2,
+        team: teamName,
+        time: timeLeft,
+        image: "task-2.jpeg",
+        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
         options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
         ans: "Li Bai"
     });

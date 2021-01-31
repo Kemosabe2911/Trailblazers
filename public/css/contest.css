@@ -143,7 +143,7 @@ a.start-btn{
     top: 0;
     right: 0;
     padding: 10px 15px;
-    background-color: #e00101;
+    background-color: #c70039;
     color: #ffffff;
     font-size: 25px;
     display: flex;
@@ -201,6 +201,17 @@ a.start-btn{
 }
 .popup button{
     padding: 10px;
-    background-color: #e00101;
+    background-color: #c70039;
     color: #ffffff;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
 }
