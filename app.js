@@ -192,14 +192,32 @@ app.post('/task-4',(req,res) =>{
     let timeLeft = req.body.time;
     let score = 0;
     console.log(teamName,timeLeft);
-    res.render('contest-layout-2',{
-        video: "demo-1",
-        no: 5,
-        team: teamName,
-        time: timeLeft,
-        image: "task-2.jpeg",
-        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
-        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
-        ans: "Li Bai"
+    //const result= Team.find({name: teamName})
+    //console.log(result);
+    Team.find({},function(err,team){
+        if(!err){
+            console.log(team)
+            console.log("Success");
+        }
+        else{
+            console.log(err)
+        }
+    })
+})
+
+
+app.get('/leaderboard',(req,res) =>{
+    Team.find({},function(err,team){
+        if(!err){
+            console.log(team)
+            const result= team;
+            console.log("Success");
+        }
+        else{
+            console.log(err)
+        }
+    }).sort({name: -1})
+    res.render("leaderboard",{
+        teams: result
     });
 })
