@@ -56,11 +56,11 @@ function ansCheck(clicked){
         document.getElementById("form_id").submit();
     }
     else{
-        //document.getElementById("popup").style.opacity=1;
+        //document.getElementById("popup").style.display="block";
         alert("Wrong Answer! Please Try Again");
     }
 }
 
 function popupClose(){
-    document.getElementById("popup").style.opacity= 0;
+    document.getElementById("popup").style.display= "none";
 }

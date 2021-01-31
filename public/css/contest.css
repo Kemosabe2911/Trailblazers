@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #cccccc;
+    background-color: #ffffff;
     overflow: hidden;
 }
 .welcome{
@@ -153,6 +153,9 @@ a.start-btn{
 .timer:hover{
     opacity: 1;
 }
+#time{
+    margin: 0px 8px;
+}
 .white{
     color: #ffffff;
 }
@@ -185,21 +188,21 @@ a.start-btn{
 }
 .popup{
     position: fixed;
-    width: 400px;
-    height: 400px;
+    width: 80vw;
+    height: 80vh;
     color: #000000;
     background-color: #ffffff;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: -1;
+    z-index: 99;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
     border-radius: 20px;
+    display: none;
 }
-.popup button{
+.popup input{
     padding: 10px;
     background-color: #c70039;
     color: #ffffff;
@@ -211,7 +214,59 @@ a.start-btn{
     align-items: center;
 }
 .image-container img{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     margin: 20px;
+}
+
+@media(max-width: 768px){
+    .v-header{
+        width: 95vw;
+        height: 80vh;
+        margin: 10vh auto;
+    }
+    .video-container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .video-container video{
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .v-header .instructs .instruct-content{
+        line-height: 1.1;
+        font-size: 16px;
+        padding: 0px 20px;
+    }
+    .v-header .instructs h2{
+        font-size: 28px;
+        padding: 10px;
+    }
+    .v-header .instructs h4{
+        font-size: 22px;
+        margin: 10px 0px;
+    }    
+    .btn-container .op-btns{
+        padding: 10px 5px;
+        color: #ffffff;
+        background-color: #0e49b5;
+        border: 2px solid #0e49b5;
+        margin: 10px;
+        width: 150px;
+        cursor: pointer;
+        transition: 0.8s;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 20px;
+    }
+    .image-container img{
+        width: 170px;
+        height: 170px;
+        margin: 10px;
+        z-index: 3;
+    }
 }
