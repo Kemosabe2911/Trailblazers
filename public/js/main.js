@@ -61,8 +61,8 @@ function ansCheck(clicked){
     else{
         //document.getElementById("popup").style.display="block";
         let penalty = document.getElementById("penalty").value;
-        document.getElementById("penalty").value = parseInt(penalty) + 60;
-        document.getElementById("penalty-view").innerHTML= (parseInt(penalty) + 60);
+        document.getElementById("penalty").value = parseInt(penalty) + 10;
+        document.getElementById("penalty-view").innerHTML= (parseInt(penalty) + 10);
         //console.log("Hello");
         alertify
             .alert("Wrong Answer! Please Try Again", function(){

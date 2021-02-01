@@ -103,29 +103,30 @@ body{
     width: 100%;
 }
 .v-header .instructs h2{
-    font-size: 50px;
-    padding: 20px;
+    font-size: 40px;
+    padding: 15px;
 }
 .v-header .instructs h4{
-    font-size: 35px;
-    margin: 20px 0px;
+    font-size: 28px;
+    margin: 10px 0px;
 }
 .v-header .instructs .instruct-content{
-    line-height: 1.5;
-    font-size: 20px;
+    line-height: 1.2;
+    font-size: 18px;
 }
 .start-btn{
     padding: 10px 25px;
     font-size: 18px;
     color: #ffffff;
     background-color: #17b978;
-    border: 2px solid #17b978;
+    border: 4px solid #17b978;
     margin: 30px 0px;
     transition: 0.8s;
     cursor: pointer;
 }
 .start-btn:hover{
-    opacity: 0.75;
+    background-color: #ffffff;
+    color: #17b978;
 }
 a.start-btn{
     text-decoration: none;

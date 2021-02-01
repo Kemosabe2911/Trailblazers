@@ -28,6 +28,9 @@ const Team= require('./models/Teams');
 //Email Model import
 const Email= require('./models/Email');
 
+//Question1 Model import
+const Question1= require('./models/Q1');
+
 
 //Routes
 app.get('/',(req,res) =>{
@@ -66,7 +69,8 @@ app.post('/',(req,res) =>{
             if(email){
                 /*res.redirect('/team')*/
                 res.render('index',{
-                    email: email.email
+                    email: email.email,
+                    errors: errors
                 });
             }
             else{
@@ -75,7 +79,8 @@ app.post('/',(req,res) =>{
                 .then((emailid) =>{
                     /*res.redirect('/');*/
                     res.render('index',{
-                        email: email.email
+                        email: email.email,
+                        errors: errors
                     });
                     console.log("Success");
                 });
@@ -90,6 +95,17 @@ app.post('/team',(req,res) =>{
     const email = req.body.email;
     const score= 0;
     let errors=[];
+    /*Question1.find({},function(err,question){
+        if(!err){
+            console.log(question)
+            const result= question;
+            console.log("Question working");
+            console.log(result);
+        }
+        else{
+            console.log(err)
+        }
+    })*/
     if(!name){
         errors.push({msg: "Please Enter a Team Name"});
         console.log(errors);
@@ -99,13 +115,18 @@ app.post('/team',(req,res) =>{
         .then((team) =>{
             console.log(team);
             if(team){
-                let teamName= team.name;
+                /*let teamName= team.name;
                     res.render('instruct',{
-                        video: "https://www.youtube.com/embed/PsZ1HcppOKY?autoplay=1&mute=1&loop=1&controls=0",
+                        video: "demo",
                         team: teamName,
                         email: req.body.email
                     });
-                console.log("Success");
+                console.log("Success");*/
+                errors.push({msg: "Team Name Already registered"});
+                res.render('index',{
+                    email: email,
+                    errors: errors
+                });
             }
             else{
                 const newTeam = new Team({name,score,email});
@@ -115,7 +136,7 @@ app.post('/team',(req,res) =>{
                     res.render('instruct',{
                         video: "demo",
                         team: teamName,
-                        
+                        email: req.body.email
                     });
                     console.log("Success");
                 });
@@ -377,4 +398,8 @@ app.get('/leaderboard',(req,res) =>{
             return (a[2]<b[2]) ? -1 : 1;
         }
     }*/
+})
+
+app.get('/exit',(req,res) =>{
+    res.redirect('/');
 })

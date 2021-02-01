@@ -126,7 +126,8 @@ body{
     cursor: pointer;
 }
 .start-btn:hover{
-    opacity: 0.75;
+    background-color: #ffffff;
+    color: #17b978;
 }
 a.start-btn{
     text-decoration: none;

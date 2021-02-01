@@ -50,6 +50,9 @@ Please enter your team name below.<br> Have a great experience and lots of fun!!
 </p>
 <form class="pr-4 pl-4 pb-4" id="subscribeform" method="POST" action="/team">
     <div class="form-group md-form">
+        <% errors.forEach(function(data){ %>
+            <h4 style="color: #ccc;"><%= data.msg %></h4>
+        <% }); %>
         <input type="text" name="name" placeholder="Your Team Name" class="form-control input-material" autocomplete="off" required>
         <input type="hidden" name="email" value="<%=email %>">
         <span class="highlight"></span>
