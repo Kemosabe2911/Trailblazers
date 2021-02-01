@@ -317,7 +317,7 @@ app.post('/task-7',(req,res) =>{
         time: timeLeft,
         task: "Identify the founding artist",
         options: ["Skrillex","Trippy red","Whiz Khalifa","Taylor swift"],
-        ans: "Skrillex"
+        ans: "Whiz Khalifa"
     });
     
 })
