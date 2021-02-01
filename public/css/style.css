@@ -103,16 +103,16 @@ body{
     width: 100%;
 }
 .v-header .instructs h2{
-    font-size: 50px;
-    padding: 20px;
+    font-size: 40px;
+    padding: 15px;
 }
 .v-header .instructs h4{
-    font-size: 35px;
-    margin: 20px 0px;
+    font-size: 28px;
+    margin: 10px 0px;
 }
 .v-header .instructs .instruct-content{
-    line-height: 1.5;
-    font-size: 20px;
+    line-height: 1.2;
+    font-size: 18px;
 }
 .start-btn{
     padding: 10px 25px;
