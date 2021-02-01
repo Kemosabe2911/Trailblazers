@@ -39,7 +39,10 @@ function displayTime() {
         timeleft =  minutes * 60 + seconds;
         document.getElementById("timeinput").value= parseInt(timeleft);
     }
+    displayPenalty();
 }
+
+//document.getElementById('myvideo').addEventListener('ended',displayTask);
 
 
 function displayTask(){
@@ -57,11 +60,14 @@ function ansCheck(clicked){
     }
     else{
         //document.getElementById("popup").style.display="block";
-        
-            alertify
+        let penalty = document.getElementById("penalty").value;
+        document.getElementById("penalty").value = parseInt(penalty) + 60;
+        document.getElementById("penalty-view").innerHTML= (parseInt(penalty) + 60);
+        //console.log("Hello");
+        alertify
             .alert("Wrong Answer! Please Try Again", function(){
             alertify.message('OK');
-            });
+        });
     }
 }
 
@@ -72,4 +78,14 @@ function popupClose(){
 document.getElementById("js-subscribe-btn").addEventListener("click", submitForm);
 function submitForm(){
     document.getElementById("subscribeform").submit();
+}
+
+function displayPenalty(){
+    let penValue = document.getElementById("penalty-view").value;
+    penValue = parseInt(penValue);
+    let min = penValue / 60;
+    let sec = penValue % 60;
+    minutes= minutes<10 ? "0"+minutes : minutes;
+    seconds= seconds<10 ? "0"+seconds : seconds;
+    document.getElementById("penalty-view").innerHTML= min + " : " + sec; 
 }

@@ -94,7 +94,7 @@ app.post('/team',(req,res) =>{
             if(team){
                 let teamName= team.name;
                     res.render('instruct',{
-                        video: "demo",
+                        video: "https://www.youtube.com/embed/PsZ1HcppOKY?autoplay=1&mute=1&loop=1&controls=0",
                         team: teamName
                     });
                 console.log("Success");
@@ -114,6 +114,7 @@ app.post('/team',(req,res) =>{
         })
     }
 })
+//https://www.youtube.com/embed/zSd1sz56h9Q?autoplay=1&mute=1&controls=0
 
 //task1 - Auditorium
 app.post('/start',(req,res) =>{
@@ -124,6 +125,7 @@ app.post('/start',(req,res) =>{
     res.render('contest',{
         video: "demo-1",
         no: 1,
+        penalty: 0,
         team: teamName,
         time: timeLeft,
         score: score,
@@ -137,11 +139,13 @@ app.post('/start',(req,res) =>{
 app.post('/task-1',(req,res) =>{
     const teamName = req.body.team;
     let timeLeft = req.body.time;
+    let  penalty = req.body.penalty;
     let score = 0;
-    console.log(teamName,timeLeft);
+    console.log(teamName,timeLeft, penalty);
     res.render('contest-layout-2',{
         video: "demo-1",
         no: 2,
+        penalty: penalty,
         team: teamName,
         time: timeLeft,
         image: "task-2.jpeg",
@@ -155,11 +159,13 @@ app.post('/task-1',(req,res) =>{
 app.post('/task-2',(req,res) =>{
     const teamName = req.body.team;
     let timeLeft = req.body.time;
+    let  penalty = req.body.penalty;
     let score = 0;
-    console.log(teamName,timeLeft);
+    console.log(teamName,timeLeft,penalty);
     res.render('contest-layout-2',{
         video: "demo-1",
         no: 3,
+        penalty: penalty,
         team: teamName,
         time: timeLeft,
         image: "task-2.jpeg",
@@ -173,11 +179,13 @@ app.post('/task-2',(req,res) =>{
 app.post('/task-3',(req,res) =>{
     const teamName = req.body.team;
     let timeLeft = req.body.time;
+    let  penalty = req.body.penalty;
     let score = 0;
     console.log(teamName,timeLeft);
     res.render('contest-layout-2',{
         video: "demo-1",
         no: 4,
+        penalty: penalty,
         team: teamName,
         time: timeLeft,
         image: "task-2.jpeg",
@@ -191,6 +199,7 @@ app.post('/task-3',(req,res) =>{
 app.post('/task-4',(req,res) =>{
     const teamName = req.body.team;
     let timeLeft = req.body.time;
+    let  penalty = req.body.penalty;
     let score = 0;
     console.log(teamName,timeLeft);
     Team.updateOne({name: teamName},
@@ -205,6 +214,7 @@ app.post('/task-4',(req,res) =>{
         no: 5,
         team: teamName,
         time: timeLeft,
+        penalty: penalty,
         image: "task-2.jpeg",
         task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
         options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
@@ -221,6 +231,62 @@ app.post('/task-4',(req,res) =>{
             console.log(err)
         }
     }).sort({name: -1})*/
+})
+
+//task6 - Ground
+app.post('/task-5',(req,res) =>{
+    const teamName = req.body.team;
+    let timeLeft = req.body.time;
+    let  penalty = req.body.penalty;
+    let score = 0;
+    console.log(teamName,timeLeft);
+    Team.updateOne({name: teamName},
+        {$set: {score: timeLeft}}, function(err,updatedTeam){
+            if(!err){
+                console.log("suceess");
+            }
+        }
+    )
+    res.render('contest-layout-2',{
+        video: "demo-1",
+        no: 6,
+        team: teamName,
+        time: timeLeft,
+        penalty: penalty,
+        image: "task-2.jpeg",
+        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
+        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
+        ans: "Li Bai"
+    });
+    
+})
+
+//task7
+app.post('/task-6',(req,res) =>{
+    const teamName = req.body.team;
+    let timeLeft = req.body.time;
+    let  penalty = req.body.penalty;
+    let score = 0;
+    console.log(teamName,timeLeft);
+    Team.updateOne({name: teamName},
+        {$set: {score: timeLeft}}, function(err,updatedTeam){
+            if(!err){
+                console.log("suceess");
+            }
+        }
+    )
+    res.render('contest-layout-2',{
+        video: "demo-1",
+        no: 7,
+        penalty: penalty,
+        team: teamName,
+        time: timeLeft,
+        image: "task-2.jpeg",
+        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
+        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
+        ans: "Li Bai"
+    });
+    
 })
 
 

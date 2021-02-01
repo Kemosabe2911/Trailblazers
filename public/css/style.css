@@ -77,6 +77,10 @@ body{
     height: 100%;
     overflow: hidden;
 }
+.video-container iframe{
+    min-width: 100%;
+    min-height: 100%;
+}
 .video-container video{
     min-width: 100%;
     min-height: 100%;

@@ -219,6 +219,20 @@ a.start-btn{
     margin: 20px;
 }
 
+.penalty-display{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 5px;
+    padding: 5px;
+    color: #000000;
+    font-size: 20px;
+}
+.penalty-display h2{
+    text-align: center;
+}
+
+
 @media(max-width: 768px){
     .v-header{
         width: 95vw;

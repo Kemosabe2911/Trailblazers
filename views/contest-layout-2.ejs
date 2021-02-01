@@ -29,6 +29,7 @@
             <form id="form_id" action="/task-<%=no %>" method="POST">
                 <input type="hidden" name="team" value="<%=team%>"/>
                 <input type="hidden" id="timeinput" name="time" value="<%=time%>"/>
+                <input type="hidden" id="penalty" name="penalty" value="<%=penalty%>"/>
                 <input type="hidden" id="answer" name="ans" value="<%=ans%>"/>
                 <div class="btn-container">
                 <% if( typeof options != 'undefined'){ %>
@@ -46,6 +47,9 @@
     <div class="timer" id="timer">
         <i class="fas fa-clock white"></i>
         <div id="time"></div>
+    </div>
+    <div class="penalty-display">
+        <h2 id="penalty-view"><%=penalty%></h2>
     </div>
     <div class="popup" id="popup">
         Wrong Answer try Again
