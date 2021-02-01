@@ -79,6 +79,7 @@ app.post('/',(req,res) =>{
 })
 
 app.post('/team',(req,res) =>{
+    console.log("Hello");
     const name= req.body.name;
     const score= 0;
     let errors=[];

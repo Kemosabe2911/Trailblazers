@@ -68,3 +68,8 @@ function ansCheck(clicked){
 function popupClose(){
     document.getElementById("popup").style.display= "none";
 }
+
+document.getElementById("js-subscribe-btn").addEventListener("click", submitForm);
+function submitForm(){
+    document.getElementById("subscribeform").submit();
+}
