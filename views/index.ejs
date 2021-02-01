@@ -51,6 +51,7 @@ Please enter your team name below.<br> Have a great experience and lots of fun!!
 <form class="pr-4 pl-4 pb-4" id="subscribeform" method="POST" action="/team">
     <div class="form-group md-form">
         <input type="text" name="name" placeholder="Your Team Name" class="form-control input-material" autocomplete="off" required>
+        <input type="hidden" name="email" value="<%=email %>">
         <span class="highlight"></span>
         <span class="bar"></span>
     </div>

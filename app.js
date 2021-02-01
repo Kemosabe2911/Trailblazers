@@ -64,13 +64,19 @@ app.post('/',(req,res) =>{
         .then((email) => {
             console.log(email);
             if(email){
-                res.redirect('/team');
+                /*res.redirect('/team')*/
+                res.render('index',{
+                    email: email.email
+                });
             }
             else{
                 const newEmail = new Email({email});
                 newEmail.save()
                 .then((emailid) =>{
-                    res.redirect('/');
+                    /*res.redirect('/');*/
+                    res.render('index',{
+                        email: email.email
+                    });
                     console.log("Success");
                 });
             }
@@ -79,8 +85,9 @@ app.post('/',(req,res) =>{
 })
 
 app.post('/team',(req,res) =>{
-    console.log("Hello");
+    console.log(req.body);
     const name= req.body.name;
+    const email = req.body.email;
     const score= 0;
     let errors=[];
     if(!name){
@@ -95,18 +102,20 @@ app.post('/team',(req,res) =>{
                 let teamName= team.name;
                     res.render('instruct',{
                         video: "https://www.youtube.com/embed/PsZ1HcppOKY?autoplay=1&mute=1&loop=1&controls=0",
-                        team: teamName
+                        team: teamName,
+                        email: req.body.email
                     });
                 console.log("Success");
             }
             else{
-                const newTeam = new Team({name,score});
+                const newTeam = new Team({name,score,email});
                 newTeam.save()
                 .then((team) =>{
                     let teamName= team.name;
                     res.render('instruct',{
                         video: "demo",
-                        team: teamName
+                        team: teamName,
+                        
                     });
                     console.log("Success");
                 });
