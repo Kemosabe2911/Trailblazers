@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trailblazers</title>
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>MaceQuest | Takshak.Online</title>
+<link rel="shortcut icon" type="image/x-icon" href="../public/images/takshak-favicon.png" />
+<script src="../public/js/script1.js"></script>
+<link rel="stylesheet" href="../public/css/style1.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <h1 class="welcome">Welcome</h1>
-    <div class="tform">
-        <form method="POST" action="/team">
-            <label>Your Team Name</label>
-            <input class="tname" type="text" name="name" placeholder="Enter Team Name">
-            <input class="tbtn" type="submit" value="Enter"> 
-        </form>
+<div class="animation anim-dark" data-aos="slide-effect-2">
+<div class="wrapper animation-inner">
+<div class="background bg-one overlay">
+</div>
+<div class="content-section d-flex justify-content-center align-items-center">
+<div class="v-lines">
+<div class="vline-1"></div>
+<div class="vline-2"></div>
+<div class="vline-3"></div>
+<div class="vline-4"></div>
+</div>
+<div class="container">
+<div class="center-content text-light align-self-center">
+<h1 style="font-family: 'Dancing Script', cursive;">Welcome to</h1>
+<h1 style="font-family: 'Potta One', cursive;">MaceQuest</h1>
+<p class="lead my-4" data-aos="fade" data-aos-delay="2500">Buckle up for the exhilarating virtual walk coming up. Hold your breathe and click the START button.</p>
+<span class="animation anim-light" data-aos="slide-effect-btn" data-aos-delay="3000">
+<a href="javascript:void(0);" class="btn btn-lg btn-outline" data-toggle="modal" data-target="#subscribeModal">START</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal modal-center modal-dark" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true"><i class="fa fa-close" style="font-size:36px;"></i></span>
+</button>
+<h2 class="modal-title" id="subscribeModalLabel">MaceQuest</h2>
+<p class="lead text-center text-light p-2">
+Please enter your team name below.<br> Have a great experience and lots of fun!!
+</p>
+<form class="pr-4 pl-4 pb-4" id="subscribeform" method="POST" action="/team">
+    <div class="form-group md-form">
+        <input type="text" name="name" placeholder="Your Team Name" class="form-control input-material" autocomplete="off" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
     </div>
+    <button type="submit" class="btn btn-lg btn-outline" value="Enter" id="js-subscribe-btn">Let's begin</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="../public/js/script2.js"></script>
+<script src="../public/js/script3.js"></script>
 </body>
 </html>
