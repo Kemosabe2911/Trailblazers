@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="/css/contest.css" type="text/css">
 </head>
-<body onload="displayTime()">
+<body onload="displayTime()" style="background: url('/images/mace.png');">
     <div class="container v-header">
         <div class="video-container">
             <video id="myvideo" class="video-player" src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" 
@@ -50,7 +50,7 @@
         <div id="time"></div>
     </div>
     <div class="penalty-display">
-        <h2 id="penalty-view"><%=penalty%></h2>
+        <h2 id="penalty-view" style="color: #fff;"><%=penalty%></h2>
     </div>
     <div class="popup" id="popup">
         Wrong Answer try Again

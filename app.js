@@ -399,3 +399,7 @@ app.get('/leaderboard',(req,res) =>{
         }
     }*/
 })
+
+app.get('/exit',(req,res) =>{
+    res.redirect('/');
+})

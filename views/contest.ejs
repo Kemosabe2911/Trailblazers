@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/087042e108.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/contest.css" type="text/css">
 </head>
-<body onload="displayTime()">
+<body onload="displayTime()" style="background: url('/images/mace.png');">
     <div class="container v-header">
         <div class="video-container">
             <!--<iframe id="myvideo" class="video-player" src="<%= video %>"" allowfullscreen onended="displayTask()"></iframe> -->
@@ -47,7 +47,7 @@
         <div id="time"></div>
     </div>
     <div class="penalty-display">
-        <h2 id="penalty-view"><%=penalty%></h2>
+        <h2 id="penalty-view" style="color: #fff;"><%=penalty%></h2>
     </div>
     <div class="popup" id="popup">
         Wrong Answer try Again
