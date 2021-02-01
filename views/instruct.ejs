@@ -11,11 +11,10 @@
 <body>
     <div class="container v-header">
         <div class="video-container">
-            <iframe id="myvideo" class="video-player" src="<%= video %>"" allowfullscreen></iframe>
-            <!--
+            <!--<iframe id="myvideo" class="video-player" src="<%= video %>"" allowfullscreen></iframe>-->
             <video id="myvideo" class="video-player" src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" 
                 autoplay muted loop>
-            </video>-->
+            </video>
         </div>
         <div class="overlay"></div>
         <div class="instructs">
