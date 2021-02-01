@@ -2,19 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MaceQuest | Takshak.Online</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/images/takshak-favicon.png" />
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/takshak-favicon.png" />
+	<link rel="stylesheet" type="text/css" href="../public/css/main.css">
+  <style>
+  .button {
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: #4E9CAF;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size:18px;
+    text-decoration:none;
+}
+  </style>
 </head>
 <body>
-    <h1 class="welcome">Welcome</h1>
-    <div class="tform">
-        <form method="POST" action="/">
-            <label>Enter Registered Email Id</label>
-            <input class="tname" type="text" name="email" placeholder="Enter Email Id">
-            <input class="tbtn" type="submit" value="login"> 
-        </form>
-    </div>
+    <div class="limiter">
+		<div class="container-login100" style="background-image: url('../public/images/mace1.jpg');">
+			<div class="wrap-login100 p-t-30 p-b-50">
+        		<span class="login100-form-title p-b-41">
+					MaceQuest
+				</span><br>
+        		<form class="login100-form validate-form p-b-33 p-t-5" method="post" style="padding:10px;">
+					<div class="wrap-input100">
+            			<input class="input100" type="text" placeholder="Your registered mail id" name="contact" required>
+            			<span class="focus-input100"></span>
+          			</div>
+          			<div class="container-login100-form-btn m-t-32">
+            			<button class="login100-form-btn" type="submit">
+              				Login
+            			</button>
+          			</div>
+        		</form>
+		    </div>
+    	</div>
+  	</div>
+
 </body>
 </html>
