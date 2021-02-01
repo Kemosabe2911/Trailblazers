@@ -5,6 +5,7 @@
 }
 body{
     background-color: #ffffff;
+    background: url('../images/mace.png') cover no-repeat;
     overflow: hidden;
 }
 .welcome{

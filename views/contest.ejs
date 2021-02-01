@@ -13,8 +13,8 @@
 <body onload="displayTime()">
     <div class="container v-header">
         <div class="video-container">
-            <!--<iframe id="myvideo" class="video-player" src="<%= video %>"" allowfullscreen onended="displayTask()"></iframe>-->
-            <video id="myvideo" class="video-player" src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" 
+            <!--<iframe id="myvideo" class="video-player" src="<%= video %>"" allowfullscreen onended="displayTask()"></iframe> -->
+            <video id="myvideo" class="video-player"  src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" 
                 autoplay muted onended="displayTask()">
             </video>
         </div>

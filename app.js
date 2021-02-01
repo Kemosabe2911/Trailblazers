@@ -138,9 +138,9 @@ app.post('/start',(req,res) =>{
         team: teamName,
         time: timeLeft,
         score: score,
-        task: "The awe-inspiring mountain Huangshan is a UNESCO World Heritage Site and major tourist attraction in China. Which famous Chinese poet found inspiration at Huangshan?",
-        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
-        ans: "Li Bai"
+        task: "I'm an electrical engineer, but I may have 50 acting credits on my resume. I am a super genius and in top 0.1% of the population in the world. At times, disabilities are blessings in disguise.I'm better known as........",
+        options: [" The Science Guy","Mr Chow","Mr Bean","Borat"],
+        ans: "Mr Bean"
     });
 })
 
@@ -151,16 +151,15 @@ app.post('/task-1',(req,res) =>{
     let  penalty = req.body.penalty;
     let score = 0;
     console.log(teamName,timeLeft, penalty);
-    res.render('contest-layout-2',{
+    res.render('contest',{
         video: "demo-1",
         no: 2,
         penalty: penalty,
         team: teamName,
         time: timeLeft,
-        image: "task-2.jpeg",
-        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
-        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
-        ans: "Li Bai"
+        task: "The probability of occurrence of a letter in a paragraph is the number on",
+        options: ["Scrabble tiles","Mahjong tiles","Dabble coins","Quiddler cards"],
+        ans: "Scrabble tiles"
     });
 })
 
@@ -177,10 +176,10 @@ app.post('/task-2',(req,res) =>{
         penalty: penalty,
         team: teamName,
         time: timeLeft,
-        image: "task-2.jpeg",
-        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
-        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
-        ans: "Li Bai"
+        image: "task3.png",
+        task: "Identify the athlete from the picture",
+        options: ["Kevin Durant","Lebron James","Micheal Jordan","Kobe Bryant"],
+        ans: "Kobe Bryant"
     });
 })
 
@@ -191,16 +190,15 @@ app.post('/task-3',(req,res) =>{
     let  penalty = req.body.penalty;
     let score = 0;
     console.log(teamName,timeLeft);
-    res.render('contest-layout-2',{
+    res.render('contest',{
         video: "demo-1",
         no: 4,
         penalty: penalty,
         team: teamName,
         time: timeLeft,
-        image: "task-2.jpeg",
-        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
-        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
-        ans: "Li Bai"
+        task: "Bathophobia is the fear of",
+        options: ["Perfume baths","Stairs","Gravity","Beautiful women"],
+        ans: "Stairs"
     });
 })
 
@@ -209,25 +207,24 @@ app.post('/task-4',(req,res) =>{
     const teamName = req.body.team;
     let timeLeft = req.body.time;
     let  penalty = req.body.penalty;
-    let score = 0;
+    let score = parseInt(timeLeft)+ parseInt(penalty);
     console.log(teamName,timeLeft);
     Team.updateOne({name: teamName},
-        {$set: {score: timeLeft}}, function(err,updatedTeam){
+        {$set: {score: score}}, function(err,updatedTeam){
             if(!err){
                 console.log("suceess");
             }
         }
     )
-    res.render('contest-layout-2',{
+    res.render('contest',{
         video: "demo-1",
         no: 5,
         team: teamName,
         time: timeLeft,
         penalty: penalty,
-        image: "task-2.jpeg",
-        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
-        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
-        ans: "Li Bai"
+        task: "What fake name does Harry use while attending Bill and Fleur's wedding in disguise?",
+        options: ["Barny Weasley","Avery Weasley","Mason Granger","Cillian Granger"],
+        ans: "Barny Weasley"
     });
     //const result= Team.find({name: teamName})
     //console.log(result);
@@ -247,10 +244,10 @@ app.post('/task-5',(req,res) =>{
     const teamName = req.body.team;
     let timeLeft = req.body.time;
     let  penalty = req.body.penalty;
-    let score = 0;
+    let score = parseInt(timeLeft)+ parseInt(penalty);
     console.log(teamName,timeLeft);
     Team.updateOne({name: teamName},
-        {$set: {score: timeLeft}}, function(err,updatedTeam){
+        {$set: {score: score}}, function(err,updatedTeam){
             if(!err){
                 console.log("suceess");
             }
@@ -262,10 +259,10 @@ app.post('/task-5',(req,res) =>{
         team: teamName,
         time: timeLeft,
         penalty: penalty,
-        image: "task-2.jpeg",
-        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
-        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
-        ans: "Li Bai"
+        image: "task6.png",
+        task: "Identify the movie",
+        options: ["Vimaanam","Soorarai Pottru","Uyare","Aby"],
+        ans: "Soorarai Pottru"
     });
     
 })
@@ -275,10 +272,37 @@ app.post('/task-6',(req,res) =>{
     const teamName = req.body.team;
     let timeLeft = req.body.time;
     let  penalty = req.body.penalty;
-    let score = 0;
+    let score = parseInt(timeLeft)+ parseInt(penalty);
     console.log(teamName,timeLeft);
     Team.updateOne({name: teamName},
-        {$set: {score: timeLeft}}, function(err,updatedTeam){
+        {$set: {score: score}}, function(err,updatedTeam){
+            if(!err){
+                console.log("suceess");
+            }
+        }
+    )
+    res.render('contest',{
+        video: "demo-1",
+        no: 7,
+        penalty: penalty,
+        team: teamName,
+        time: timeLeft,
+        task: "If “P * Q” indicates “P is the father of Q’; “P • Q” indicates `P is the sister of Q’; ‘P o Q” indicates ‘P is the brother of Q’; ‘P f Q” indicates ‘P is the mother of Q’; which of the following would represent ‘P is brotherin- law of Q” ?",
+        options: ["PoRfQ"," P*RfQ","P•RfQ","None"],
+        ans: "None"
+    });
+    
+})
+
+//task8
+app.post('/task-7',(req,res) =>{
+    const teamName = req.body.team;
+    let timeLeft = req.body.time;
+    let  penalty = req.body.penalty;
+    let score = parseInt(timeLeft)+ parseInt(penalty);
+    console.log(teamName,timeLeft);
+    Team.updateOne({name: teamName},
+        {$set: {score: score}}, function(err,updatedTeam){
             if(!err){
                 console.log("suceess");
             }
@@ -286,14 +310,42 @@ app.post('/task-6',(req,res) =>{
     )
     res.render('contest-layout-2',{
         video: "demo-1",
-        no: 7,
+        no: 8,
+        image: "task8.png",
         penalty: penalty,
         team: teamName,
         time: timeLeft,
-        image: "task-2.jpeg",
-        task: "Who am I? Knighted Englishman of Scottish descent born 1945. 'Transatlantic Crossing', 'This Old Heart of Mine'.",
-        options: ["Kai Men Sho","Li Bai","Jack Li","Jin Young"],
-        ans: "Li Bai"
+        task: "Identify the founding artist",
+        options: ["Skrillex","Trippy red","Whiz Khalifa","Taylor swift"],
+        ans: "Skrillex"
+    });
+    
+})
+
+//task9
+app.post('/task-8',(req,res) =>{
+    const teamName = req.body.team;
+    let timeLeft = req.body.time;
+    let  penalty = req.body.penalty;
+    let score = parseInt(timeLeft)+ parseInt(penalty);
+    console.log(teamName,timeLeft);
+    Team.updateOne({name: teamName},
+        {$set: {score: score}}, function(err,updatedTeam){
+            if(!err){
+                console.log("suceess");
+            }
+        }
+    )
+    res.render('contest',{
+        video: "demo-1",
+        no: 9,
+        penalty: penalty,
+        team: teamName,
+        time: timeLeft,
+        task: `Guess the song:
+        💸💸🍺🎵💦`,
+        options: ["Tip tip barsa paani","Baha killiki","Pani re pani re rang tera kaisa","Pani da rang deku ke"],
+        ans: "Tip tip barsa paani"
     });
     
 })
