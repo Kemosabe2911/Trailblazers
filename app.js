@@ -371,6 +371,46 @@ app.post('/task-8',(req,res) =>{
     
 })
 
+//Finish
+app.post('/task-9',(req,res) =>{
+    const teamName = req.body.team;
+    let timeLeft = req.body.time;
+    let  penalty = req.body.penalty;
+    let score = parseInt(timeLeft)+ parseInt(penalty);
+    console.log(teamName,timeLeft);
+    Team.updateOne({name: teamName},
+        {$set: {score: score}}, function(err,updatedTeam){
+            if(!err){
+                console.log("suceess");
+            }
+        }
+    )
+    Team.findOne({name: teamName},function(err,team){
+        if(!err){
+            console.log(team)
+            const result= team;
+            console.log("Success");
+            console.log(result);
+            let time = parseInt(result.score);
+            let minutes= parseInt(time/60);
+            let seconds= parseInt(time%60);
+            minutes= minutes<10 ? "0"+minutes : minutes;
+            seconds= seconds<10 ? "0"+seconds : seconds;
+            console.log(minutes,seconds)
+            res.render('finish',{
+                video: "demo-1",
+                minutes: minutes,
+                seconds: seconds
+            });
+        }
+        else{
+            console.log(err)
+        }
+    })
+})
+
+
+
 
 //Leaderboard
 app.get('/leaderboard',(req,res) =>{
