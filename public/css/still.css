@@ -1,0 +1,512 @@
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+nav ul,
+nav li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+ol,
+ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--start editing from here--*/
+
+a {
+	text-decoration: none;
+}
+
+.txt-rt {
+	text-align: right;
+}
+.clear {
+    clear: both;
+}
+/* text align right */
+
+.txt-lt {
+	text-align: left;
+}
+
+/* text align left */
+
+.txt-center {
+	text-align: center;
+}
+
+/* text align center */
+
+.float-rt {
+	float: right;
+}
+
+/* float right */
+
+.float-lt {
+	float: left;
+}
+
+/* float left */
+
+.pos-relative {
+	position: relative;
+}
+
+/* Position Relative */
+
+.pos-absolute {
+	position: absolute;
+}
+
+/* Position Absolute */
+
+.vertical-base {
+	vertical-align: baseline;
+}
+
+/* vertical align baseline */
+
+.vertical-top {
+	vertical-align: top;
+}
+
+/* vertical align top */
+
+nav.vertical ul li {
+	display: block;
+}
+
+/* vertical menu */
+
+nav.horizontal ul li {
+	display: inline-block;
+}
+
+/* horizontal menu */
+
+img {
+	max-width: 100%;
+}
+
+/*--end reset--*/
+
+body {
+    background: url(../images/img1.jpg);
+    padding: 3em 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+.main-heading h1 {
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 3px;
+    font-family: 'Poppins', sans-serif;
+}
+.pricing {
+    width: 100%;
+    border: 1px solid #ffffff52;
+}
+.price2 ul li i {
+    margin-right: 10px;
+    width: 30px;
+    font-size: 20px;
+}
+.price2 ul {
+    padding-left: 3em;
+}
+.price2 h1{
+    color:#f85a40;
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+}
+.pricing-table {
+    margin: 0 auto;
+    width: 64%;
+}
+.price-top h3 {
+    font-size: 2em;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 400;
+	font-family: 'Poppins', sans-serif;
+}
+.price-top {
+    padding: 2em;
+    text-align: center;
+}
+.clr1 {
+    background: #f85a40;
+}
+.clr2 {
+    background: #ca3287;
+}
+.clr3{
+    background: #30c39e;
+}
+.price-bottom ul li {
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #fff;
+    padding: 0.4em 2em;
+}
+.price-bottom b {
+    font-weight: 600;
+    color: #333;
+	font-size: .9em;
+}
+.price2 {
+    padding: 3em 0px;
+}
+a.button {
+    font-size: .85em;
+    text-transform: uppercase;
+    padding: 1em 1em;
+    color: #fff;
+    display: block;
+    width: 60%;
+    margin: 2.5em auto 0;
+    border-radius: 4px;
+    font-weight: 700;
+    text-align: center;
+}
+a.button:hover {
+	opacity: .8;
+}
+.pricing:nth-child(4) {
+    margin-right: 0;
+}
+.price-bottom {
+    padding: 0em 0;
+    background: #0003;
+}
+a.button.but1 {
+    background: #7BD553;
+}
+a.button.but2 {
+    background: #3AD5A0;
+}
+a.button.but3 {
+    background: #45D0DA;
+}
+.footer {
+    text-align: center;
+    padding: 5em 0 0;
+}
+.footer p {
+    font-size: 1em;
+    color: #fff;
+    margin: 0px;
+	letter-spacing: 2px;
+}
+.footer p a:hover {
+    color: #34a370;
+}
+.footer p a {
+    color: #34a370;
+}
+/*-- responsive sizes --*/
+
+@media screen and (max-width: 1440px){
+.price2 ul {
+    padding-left: 2em;
+}
+
+}
+
+@media screen and (max-width: 1366px){
+.main-heading h1 {
+    font-size: 2.8em;
+}
+.price-bottom ul li {
+    font-size: 17px;
+}
+.footer p {
+    letter-spacing: 1px;
+}
+}
+
+@media screen and (max-width: 1280px){
+.pricing-table {
+    width: 75%;
+}
+.price2 ul {
+    padding-left: 3em;
+}
+}
+
+@media screen and (max-width: 1080px){
+.pricing-table {
+    width: 90%;
+}
+}
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 991px){
+.price2 ul {
+    padding-left: 2em;
+}
+.main-heading h1 {
+    font-size: 2.5em;
+}
+}
+
+@media screen and (max-width: 800px){
+.price2 ul {
+    padding-left: 1.5em;
+}
+.price-bottom ul li {
+    font-size: 15px;
+}
+.price2 ul li i {
+    margin-right: 0;
+}
+a.button {
+    width: 54%;
+}
+.price-top h3 {
+    font-size: 1.5em;
+}
+.price-top {
+    padding: 1.5em;
+}
+}
+@media screen and (max-width: 768px){
+.pricing-table {
+    width: 97%;
+}
+.main-heading h1 {
+    font-size: 2.3em;
+}
+}
+
+@media screen and (max-width: 736px){
+.pricing {
+    width: 48%;
+}
+.pricing-table {
+    width: 80%;
+}
+.pri3 {
+    margin-top: 25px;
+}
+.main-heading h1 {
+    font-size: 2em;
+}
+.price2 ul {
+    padding-left: 3em;
+}
+}
+
+@media screen and (max-width: 667px){
+.pricing-table {
+    width: 90%;
+}
+}
+
+@media screen and (max-width: 640px){
+
+}
+@media screen and (max-width: 600px){
+.main-heading h1 {
+    font-size: 1.9em;
+}
+.price2 ul {
+    padding-left: 2em;
+}
+.price2 ul li i {
+    font-size: 18px;
+}
+.footer p {
+    font-size: 15px;
+}
+}
+
+@media screen and (max-width: 568px){
+.footer {
+    padding: 4em 0 0;
+}
+}
+
+@media screen and (max-width: 480px){
+.pricing {
+    width: 60%;
+    margin: 0 auto 20px;
+    float: none;
+}
+.pricing-table {
+    width: 100%;
+}
+.main-heading h1 {
+    font-size: 1.5em;
+}
+.footer {
+    padding: 3em 0 0;
+}
+}
+
+@media screen and (max-width: 414px){
+.price2 ul {
+    padding-left: 1.8em;
+}
+.main-heading h1 {
+    font-size: 1.4em;
+}
+.price-bottom ul li {
+    font-size: 14px;
+}
+.footer p {
+    font-size: 14px;
+}
+}
+
+@media screen and (max-width: 384px){
+.pricing {
+    width: 68%;
+}
+.price2 ul {
+    padding-left: 2.5em;
+}
+.main-heading h1 {
+    font-size: 1.3em;
+}
+}
+
+@media screen and (max-width: 375px){
+
+}
+
+@media screen and (max-width: 320px){
+.pricing {
+    width: 80%;
+}
+.main-heading h1 {
+    letter-spacing: 1px;
+}
+}
+/*-- //responsive sizes --*/
