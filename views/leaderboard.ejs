@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trailblazers</title>
-    <script src="https://kit.fontawesome.com/087042e108.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/contest.css" type="text/css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaceQuest | Takshak.Online</title>
+<link rel="shortcut icon" type="image/x-icon" href="/images/takshak-favicon.png" />
+<link rel="stylesheet" type="text/css" href="/css/main1.css">
 </head>
+
 <body>
-    <table border="1">
-        <thead>
+<div class="limiter">
+<div class="container-table100">
+<div class="wrap-table100">
+<div class="table100">
+<h1>LEADERBOARD</h1>
+<table>
+<thead>
+<tr class="table100-head">
+<th class="column2">Team Name</th>
+<th class="column3">Registered Mail Id</th>
+<th class="column4">Time</th>
+</tr>
+</thead>
+<tbody>
+    <% if (typeof teams != 'undefined'){ %>
+        <% teams.forEach(function(team){ %>
             <tr>
-            <th>Email Id</th>
-            <th>Team Name</th>
-            <th>Time Taken</th>
+                <!--<th class="column1">Rank</th>
+                <td class="column1">1</td>-->
+                <td class="column2"><%= team.name %></td>
+                <td class="column3"><%= team.email %></td>
+                <td class="column4"><%= team.score %></td>
             </tr>
-        </thead>
-        <tbody>
-        <% if (typeof teams != 'undefined'){ %>
-            <% teams.forEach(function(team){ %>
-                <tr>
-                    <td><%= team.email %></td>
-                    <td><%= team.name %></td>
-                    <td><%= team.score %></td>
-                </tr>
-            <%})%>
-        <%}%>
-        </tbody>
-    </table>
-    <script src="/js/main.js"></script>
+        <%})%>
+    <%}%>
+
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
