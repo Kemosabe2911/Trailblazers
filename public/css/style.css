@@ -5,7 +5,6 @@
 }
 body{
     background-color: #cccccc;
-    overflow: hidden;
 }
 .welcome{
     text-align: center;
@@ -90,7 +89,7 @@ body{
     min-width: 100%;
     min-height: 100%;
     background-color: #ffffff;
-    opacity: 0.75;
+    opacity: 0.85;
     z-index: 1;
 }
 .v-header .instructs{
@@ -153,4 +152,20 @@ a.start-btn{
 }
 .white{
     color: #ffffff;
+}
+
+.start-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-container .l-btn{
+    padding: 15px 20px;
+    background-color: #f85a40;
+    color: #ffffff;
+    border: 2px solid #f85a40;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
 }
