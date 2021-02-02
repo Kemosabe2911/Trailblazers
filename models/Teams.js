@@ -14,6 +14,9 @@ const TeamSchema= new mongoose.Schema(
             type: String,
             required: true  
         },
+        penalty:{
+            type: Number
+        },
         date:{
             type: Date,
             default: Date.now

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaceQuest | Takshak.Online</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/takshak-favicon.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <script src="https://kit.fontawesome.com/087042e108.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body style="background: url('/images/mace.png');">
+    <div class="container v-header">
+        <div class="video-container">
+            <!--<iframe id="myvideo" class="video-player" src="<%= video %>"" allowfullscreen onended="displayTask()"></iframe> -->
+            <video id="myvideo" class="video-player"  src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" 
+                autoplay muted >
+            </video>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="instructs" id="instruct">
+            <h1 style="font-size: 40px;">CONGRATULATIONS</h1>
+            <h2>Your Time:  <%=minutes %> : <%=seconds %></h2>
+            <a href="/" class="button">Exit Game</a>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+</body>
+</html>

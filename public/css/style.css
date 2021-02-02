@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -67,6 +70,7 @@ body{
     text-align: center;
     padding: 10px;
     border: 5px solid transparent;
+    font-family: 'Poppins',sans-serif;
 }
 .video-container{
     position: absolute;
@@ -165,6 +169,18 @@ a.start-btn{
     background-color: #f85a40;
     color: #ffffff;
     border: 2px solid #f85a40;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.instructs a{
+    text-decoration: none;
+}
+.button{
+    padding: 15px 20px;
+    background-color: #e00101;
+    color: #ffffff;
+    border: 2px solid #e00101;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
