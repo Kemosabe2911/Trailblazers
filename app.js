@@ -63,6 +63,7 @@ app.post('/',(req,res) =>{
     }
     else{
         console.log('Hello');
+        console.log(email);
         Email.findOne({email: email})
         .then((email) => {
             console.log(email);
@@ -76,7 +77,7 @@ app.post('/',(req,res) =>{
             else{
                 const newEmail = new Email({email});
                 newEmail.save()
-                .then((emailid) =>{
+                .then((email) =>{
                     /*res.redirect('/');*/
                     res.render('index',{
                         email: email.email,
