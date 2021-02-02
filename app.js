@@ -134,7 +134,7 @@ app.post('/team',(req,res) =>{
                 .then((team) =>{
                     let teamName= team.name;
                     res.render('instruct',{
-                        video: "demo",
+                        video: "demo-1.mp4",
                         team: teamName,
                         email: req.body.email
                     });
