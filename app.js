@@ -158,7 +158,7 @@ app.post('/start',(req,res) =>{
             let penalty= team.penalty;
             console.log(teamName,timeLeft);
             res.render('contest',{
-                video: "demo-1",
+                video: "task1",
                 no: 1,
                 penalty: penalty,
                 team: teamName,
@@ -191,7 +191,7 @@ app.post('/task-1',(req,res) =>{
             console.log(teamName,timeLeft);
             let penalty = team.penalty;
             res.render('contest',{
-                video: "demo-1",
+                video: "task2",
                 no: 2,
                 penalty: penalty,
                 team: teamName,
@@ -224,7 +224,7 @@ app.post('/task-2',(req,res) =>{
             console.log(teamName,timeLeft);
             let penalty = team.penalty;
             res.render('contest-layout-2',{
-                video: "demo-1",
+                video: "task3",
                 no: 3,
                 penalty: penalty,
                 team: teamName,
@@ -258,7 +258,7 @@ app.post('/task-3',(req,res) =>{
             console.log(teamName,timeLeft);
             let penalty = team.penalty;
             res.render('contest',{
-                video: "demo-1",
+                video: "task4",
                 no: 4,
                 penalty: penalty,
                 team: teamName,
@@ -292,7 +292,7 @@ app.post('/task-4',(req,res) =>{
             console.log(teamName,timeLeft);
             let penalty = team.penalty;
             res.render('contest',{
-                video: "demo-1",
+                video: "task5",
                 no: 5,
                 team: teamName,
                 time: timeLeft,
@@ -337,7 +337,7 @@ app.post('/task-5',(req,res) =>{
             console.log(teamName,timeLeft);
             let penalty = team.penalty;
             res.render('contest-layout-2',{
-                video: "demo-1",
+                video: "task6",
                 no: 6,
                 team: teamName,
                 time: timeLeft,
@@ -373,7 +373,7 @@ app.post('/task-6',(req,res) =>{
             console.log(teamName,timeLeft);
             let penalty = team.penalty;
             res.render('contest',{
-                video: "demo-1",
+                video: "task7",
                 no: 7,
                 penalty: penalty,
                 team: teamName,
@@ -408,7 +408,7 @@ app.post('/task-7',(req,res) =>{
             console.log(teamName,timeLeft);
             let penalty = team.penalty;
             res.render('contest-layout-2',{
-                video: "demo-1",
+                video: "task8",
                 no: 8,
                 image: "task8.png",
                 penalty: penalty,
@@ -444,7 +444,7 @@ app.post('/task-8',(req,res) =>{
             console.log(teamName,timeLeft);
             let penalty = team.penalty;
             res.render('contest',{
-                video: "demo-1",
+                video: "task9",
                 no: 9,
                 penalty: penalty,
                 team: teamName,
@@ -486,7 +486,7 @@ app.post('/task-9',(req,res) =>{
             seconds= seconds<10 ? "0"+seconds : seconds;
             console.log(minutes,seconds)
             res.render('finish',{
-                video: "demo-1",
+                video: "finish",
                 minutes: minutes,
                 seconds: seconds
             });
