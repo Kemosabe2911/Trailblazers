@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="/css/contest.css" type="text/css">
 </head>
 <body>
+    <table border="1">
+        <thead>
+            <tr>
+            <th>Email Id</th>
+            <th>Team Name</th>
+            <th>Time Taken</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% if (typeof teams != 'undefined'){ %>
+            <% teams.forEach(function(team){ %>
+                <tr>
+                    <td><%= team.email %></td>
+                    <td><%= team.name %></td>
+                    <td><%= team.score %></td>
+                </tr>
+            <%})%>
+        <%}%>
+        </tbody>
+    </table>
     <script src="/js/main.js"></script>
 </body>
 </html>
