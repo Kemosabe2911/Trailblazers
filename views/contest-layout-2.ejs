@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="/css/contest.css" type="text/css">
 </head>
-<body onload="displayTime()" style="background: url('/images/mace.png');">
+<body onload="displayTime()" style="background: url('/images/mace.png');  background-position: 50% 50%;
+background-size: cover;">
     <div class="container v-header">
         <div class="video-container">
             <video id="myvideo" class="video-player" src="<%= typeof video !='undefined'? `/videos/${video}.mp4?autoplay=1` : 'Not displaying' %>" 
