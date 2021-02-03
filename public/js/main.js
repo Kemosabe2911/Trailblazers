@@ -89,3 +89,7 @@ function displayPenalty(){
     seconds= seconds<10 ? "0"+seconds : seconds;
     document.getElementById("penalty-view").innerHTML= min + " : " + sec; 
 }
+
+function exit(){
+    window.location.href="/exit"
+}

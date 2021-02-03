@@ -529,6 +529,6 @@ app.get('/leaderboard',(req,res) =>{
     }*/
 })
 
-app.get('/exit',(req,res) =>{
+app.post('/exit',(req,res) =>{
     res.redirect('/');
 })
