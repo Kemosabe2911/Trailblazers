@@ -165,9 +165,9 @@ app.post('/start',(req,res) =>{
                 team: teamName,
                 time: timeLeft,
                 score: score,
-                task: "I'm an electrical engineer, but I may have 50 acting credits on my resume. I am a super genius and in top 0.1% of the population in the world. At times, disabilities are blessings in disguise.I'm better known as........",
-                options: [" The Science Guy","Mr Chow","Mr Bean","Borat"],
-                ans: "Mr Bean"
+                task: "I'm one of the most world-renowned chefs and cooking with me will be your worst nightmare. I run a foundation along with my wife to support charities. Who am I?",
+                options: ["Vikas Khanna","Daniel Hemm","Gordan Ramsay","Charity Morgan"],
+                ans: "Gordan Ramsay"
             });
         }
     })
@@ -343,10 +343,10 @@ app.post('/task-5',(req,res) =>{
                 team: teamName,
                 time: timeLeft,
                 penalty: penalty,
-                image: "task6.png",
+                image: "task6-2.png",
                 task: "Identify the movie",
-                options: ["Vimaanam","Soorarai Pottru","Uyare","Aby"],
-                ans: "Soorarai Pottru"
+                options: ["Fury","Hacksaw ridge","Extraction","American Sniper"],
+                ans: "Fury"
             });
         }
     })
@@ -379,9 +379,9 @@ app.post('/task-6',(req,res) =>{
                 penalty: penalty,
                 team: teamName,
                 time: timeLeft,
-                task: "If “P * Q” indicates “P is the father of Q’; “P • Q” indicates `P is the sister of Q’; ‘P o Q” indicates ‘P is the brother of Q’; ‘P f Q” indicates ‘P is the mother of Q’; which of the following would represent ‘P is brotherin- law of Q” ?",
-                options: ["PoRfQ"," P*RfQ","P•RfQ","None"],
-                ans: "None"
+                task: "Read the following information and answer the questions given below:   P + Q mean P is the daughter of Q, P × Q means P is the son of Q and P – Q means P is the wife of Q.Example 7: If A × B – D, which of the following is true ?",
+                options: ["D is wife of B","A is daughter of B","B is father of A","D is father of A"],
+                ans: "D is father of A"
             });
         }
     })
@@ -411,13 +411,13 @@ app.post('/task-7',(req,res) =>{
             res.render('contest-layout-2',{
                 video: "task8",
                 no: 8,
-                image: "task8.png",
+                image: "task8-2.png",
                 penalty: penalty,
                 team: teamName,
                 time: timeLeft,
-                task: "Identify the founding artist",
-                options: ["Skrillex","Trippy red","Whiz Khalifa","Taylor swift"],
-                ans: "Whiz Khalifa"
+                task: "Identify the architect",
+                options: ["Frank Gehri","Laurie Baker","Antoni Gaudi","Zaha Hadid"],
+                ans: "Antoni Gaudi"
             });
         }
     })
