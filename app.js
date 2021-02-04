@@ -230,10 +230,10 @@ app.post('/task-2',(req,res) =>{
                 penalty: penalty,
                 team: teamName,
                 time: timeLeft,
-                image: "task3.png",
+                image: "task3-2.png",
                 task: "Identify the athlete from the picture",
-                options: ["Kevin Durant","Lebron James","Micheal Jordan","Kobe Bryant"],
-                ans: "Kobe Bryant"
+                options: ["Carolyne Wozniaki","Megan Rapinoe","Alex Morgan","Lucy Bronze"],
+                ans: "Alex Morgan"
             });
         }
     })
